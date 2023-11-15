@@ -22,3 +22,14 @@
     height: 62px;
     object-fit: cover;
 }
+
+.nav-link {
+  font-size: 17px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--orange);
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}

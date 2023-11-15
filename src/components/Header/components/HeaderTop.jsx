@@ -10,7 +10,7 @@ export default function HeaderTop() {
       <div className="container">
         <div className="header-top-wrapper">
           <div className="header-top-social">
-            <Flex gap="middle" horizon align="center">
+            <Flex gap="middle"horizon="true" align="center">
               <FaFacebookF size={14} />
               <FaLinkedinIn size={14} />
               <ImYoutube2 size={20} />

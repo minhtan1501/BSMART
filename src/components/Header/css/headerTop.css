@@ -1,6 +1,6 @@
 .header-top {
   height: 70px;
-  background-color: #0e0a38;
+  background-color: var(--dark-blue);
   overflow: hidden;
   padding: 15px 0;
   opacity: 1;
@@ -56,7 +56,7 @@
 
 .header-top-social svg:hover,
 .btn-reg-log:hover {
-  color: #f26323 !important;
+  color: var(--orange) !important;
   background: transparent !important;
   transition: color 0.2s ease;
 }
