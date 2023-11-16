@@ -27,7 +27,7 @@ export default function Course() {
             breakpoints={{
               320: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 1000
               },
               768: {
                 slidesPerView: 2,
@@ -35,7 +35,7 @@ export default function Course() {
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 50,
               },
               1280: {
                 slidesPerView: 4,

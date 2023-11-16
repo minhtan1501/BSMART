@@ -28,7 +28,7 @@ export default function IntensiveCourse() {
             breakpoints={{
               320: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 1000
               },
               768: {
                 slidesPerView: 2,
@@ -36,7 +36,7 @@ export default function IntensiveCourse() {
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 30,
+                spaceBetween: 50,
               },
               1280: {
                 slidesPerView: 4,
