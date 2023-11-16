@@ -33,3 +33,9 @@
   color: var(--orange);
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }
+
+@media (min-width: 992px){
+  .header-bottom .container {
+    padding: 0px !important;
+  }
+}

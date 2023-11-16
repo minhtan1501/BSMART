@@ -1,3 +1,14 @@
+.course-card {
+  border-radius: 10px;
+  border: 0.5px solid #999999;
+  overflow: hidden;
+}
+
+.card-body {
+  border: 0.5px solid #999999;
+  overflow: hidden;
+}
+
 .banner-course {
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +25,8 @@
   border: 2px solid #999;
   padding: 2px;
   background-color: #fff;
-  bottom: -40%;
+  bottom: 0;
+  transform: translateY(90%);
   left: 20px;
   border-radius: 5px;
 }
@@ -27,8 +39,8 @@
   width: 100%;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-  line-height: 20px !important;
-  -webkit-line-clamp: 3;
+  line-height: 25px !important;
+  -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
 }
@@ -38,37 +50,60 @@
   height: 100%;
 }
 
-
 .course-card__title__flag {
-    position: absolute;
-    transform: translate(50%,-100%);
-    top: 0;
-    right: 0;
-}
-
- .course-card .description {
-    margin-top: 10px;
-    font-weight: 400;
-    text-align: left;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 25px;
-    -webkit-line-clamp: 3;
-    height: 75px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-}
-
-.course-card .description p {
-    font-weight: 400;
-    font-size: 15px;
+  position: absolute;
+  transform: translate(50%, -80%);
+  top: 0;
+  right: 0;
 }
 
 .course-card__rating li {
-    margin-inline: 0 0 !important;
+  margin-inline: 0 0 !important;
 }
 
 :where(.css-dev-only-do-not-override-1adbn6x).ant-rate {
-   color: #FF630F;
+  color: #ff630f;
+}
+
+.course-card__description {
+  margin-top: 10px;
+  font-weight: 400 !important;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 25px;
+  -webkit-line-clamp: 3;
+  height: 75px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.course-card__price {
+  font-weight: bold;
+  color: firebrick;
+  font-size: 18px;
+}
+
+.course-card__btn {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 5px !important;
+  font-size: 20px !important;
+  background-color: var(--orange);
+  color: white !important;
+  border-radius: 5px;
+}
+
+.course-card__btn:hover {
+  opacity: 0.8;
+  background-color: var(--orange) !important;
+  color: white !important;
+}
+
+.swiper-pagination {
+  margin-top: 2rem;
 }

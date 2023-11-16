@@ -8,13 +8,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function Course() {
+export default function IntensiveCourse() {
   return (
     <Typography.Paragraph className="course-section">
       <Typography.Paragraph className="container">
         <Typography.Paragraph className="course-content">
           <Typography.Title level={2} className="text-center">
-            Khoá học tiêu biểu
+            Khoá học cấp tốc
           </Typography.Title>
           <Swiper
             scrollbar={{ draggable: true }}
@@ -24,6 +24,7 @@ export default function Course() {
             pagination={{
               clickable: true,
             }}
+            className=""
             breakpoints={{
               320: {
                 slidesPerView: 1,

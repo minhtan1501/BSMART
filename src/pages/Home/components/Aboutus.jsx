@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/Aboutus.css";
 import { Col, Flex, Row, Typography } from "antd";
 import BtnLink from "../../../components/BtnLink";

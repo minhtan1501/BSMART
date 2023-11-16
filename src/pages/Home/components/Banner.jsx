@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../css/Banner.css"
 import BtnLink from "../../../components/BtnLink";
 import { Typography } from "antd";
