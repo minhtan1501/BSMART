@@ -1,0 +1,74 @@
+.banner-course {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+}
+
+.avatar-mentor {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  border: 2px solid #999;
+  padding: 2px;
+  background-color: #fff;
+  bottom: -40%;
+  left: 20px;
+  border-radius: 5px;
+}
+
+.card-title {
+  font-size: 24px !important;
+  font-weight: 700;
+  color: var(--text-primary) !important;
+  margin-top: 14px;
+  width: 100%;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 20px !important;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.course-card__title img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.course-card__title__flag {
+    position: absolute;
+    transform: translate(50%,-100%);
+    top: 0;
+    right: 0;
+}
+
+ .course-card .description {
+    margin-top: 10px;
+    font-weight: 400;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25px;
+    -webkit-line-clamp: 3;
+    height: 75px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.course-card .description p {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.course-card__rating li {
+    margin-inline: 0 0 !important;
+}
+
+:where(.css-dev-only-do-not-override-1adbn6x).ant-rate {
+   color: #FF630F;
+}

@@ -33,7 +33,7 @@
     font-weight: 700;
     margin-bottom: 20px;
 }
-.banner .caption-content p {
+.caption-content__description {
     color: #fff;
     padding: 0 200px;
     font-size: 16px;

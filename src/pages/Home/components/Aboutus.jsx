@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Aboutus.css";
-import { Col, Flex, Row } from "antd";
+import { Col, Flex, Row, Typography } from "antd";
 import BtnLink from "../../../components/BtnLink";
 
 export default function Aboutus() {
@@ -8,11 +8,11 @@ export default function Aboutus() {
     <section className="aboutus">
       <div className="container">
         <div className="aboutus-content text-center">
-          <h2 className="aboutus-heading">Về chúng tôi</h2>
+          <Typography.Title level={2} className="aboutus-heading">Về chúng tôi</Typography.Title>
         </div>
         <Row align={"center"} justify={"center"} gutter={[18, 18]}>
           <Col md={12} xs={24}>
-            <p className="about-description">
+            <Typography.Text className="about-description">
               BSMART được thành lập với mục tiêu trở thành nền tảng tin cậy về
               đào tạo lập trình viên, kết nối Mentor và Mentee. Với đội ngũ
               Mentor giàu kinh nghiệm và chuyên môn, BSMART cam kết mang đến các
@@ -23,7 +23,7 @@ export default function Aboutus() {
               tiếp cận với những kiến thức và kỹ năng mới nhất trong lập trình.
               Bên cạnh đó, BSMART luôn đặt sự quan tâm, hỗ trợ học viên trong
               quá trình học tập và phát triển sự nghiệp sau khi tốt nghiệp.
-            </p>
+            </Typography.Text >
             <Flex gap={"middle"} className="aboutus-control">
                 <BtnLink path="/course">
                     XEM KHOÁ HỌC

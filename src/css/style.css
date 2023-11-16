@@ -45,7 +45,7 @@ table {
 
 
 
-.container{
+/* .container{
 	position:relative;
 	margin-left:auto;
 	margin-right:auto;
@@ -105,7 +105,7 @@ table {
 	  max-width:100%
 	}
   }
-  
+   */
   .wrapper {
     position: relative;
     height: 100%;
@@ -125,6 +125,11 @@ table {
     padding: 20px 7px;
     letter-spacing: 1px;
     border-radius: 5px;
+}
+
+.sub-title, .card-text {
+    font-weight: 600;
+    color: #999 !important;
 }
 
 .btn-link:hover {
