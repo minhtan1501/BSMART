@@ -77,7 +77,6 @@ export default function CourseCard({ data }) {
               style={{ fontStyle: "italic", fontSize: 16 }}
               strong={true}
             >
-
               {data?.numStudent} Học viên
             </Typography.Text>
           </Flex>

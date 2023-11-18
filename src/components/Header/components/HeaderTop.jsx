@@ -1,9 +1,9 @@
+// import "../css/HeaderTop.css";
 import { FaFacebookF, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { ImYoutube2 } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
 import { Button, Flex, Input } from "antd";
 import { IoMdSearch } from "react-icons/io";
-import "../css/HeaderTop.css";
 export default function HeaderTop() {
   return (
     <div className="header-top">

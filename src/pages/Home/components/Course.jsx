@@ -2,19 +2,17 @@ import { Typography } from "antd";
 import "../css/Course.css";
 
 import SlideShow from "../../../components/SlideShow";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { CourseList } from "../../../utils/fakeData";
 import CourseCard from "../../../components/CourseCard"
 export default function Course() {
-  const [data,setData] = useState(() => {
-    return CourseList.filter((_,i) =>  {
-      if(i < 5) {
-        return _;
-      }
-      return;
-    })
+  const data = useMemo(() => {
+    return CourseList.filter((d,i) => {
+      if(i < 5 ) return d;
+      return; 
+    },[])
   })
-  console.log(data);
+  console.log(1);
   return (
     <Typography.Paragraph className="course-section">
       <Typography.Paragraph className="container">

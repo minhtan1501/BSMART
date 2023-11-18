@@ -6,12 +6,13 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Scrollbar } from "swiper/modules";
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./style.css";
 
 export default function SlideShow({ data = [], RenderSlide = null }) {
   const swiperRef = useRef();
   const paginationRef = useRef(null);
+  console.log(1);
   return (
     <div className="swiper-container">
       <Swiper
@@ -44,7 +45,11 @@ export default function SlideShow({ data = [], RenderSlide = null }) {
         }}
       >
         {data.map((d) => {
-          return <RenderSlide data={d} key={d.id} />;
+          return (
+            <SwiperSlide key={d.id}>
+              <RenderSlide data={d} />
+            </SwiperSlide>
+          );
         })}
       </Swiper>
       <div ref={paginationRef} className="my-custom-pagination-div"></div>
