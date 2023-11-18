@@ -1,14 +1,20 @@
 import { Typography } from "antd";
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
-import CourseCard from "../../../components/CourseCard";
 import "../css/Course.css";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-
+import SlideShow from "../../../components/SlideShow";
+import { useState } from "react";
+import { CourseList } from "../../../utils/fakeData";
+import CourseCard from "../../../components/CourseCard"
 export default function Course() {
+  const [data,setData] = useState(() => {
+    return CourseList.filter((_,i) =>  {
+      if(i < 5) {
+        return _;
+      }
+      return;
+    })
+  })
+  console.log(data);
   return (
     <Typography.Paragraph className="course-section">
       <Typography.Paragraph className="container">
@@ -16,46 +22,7 @@ export default function Course() {
           <Typography.Title level={2} className="text-center">
             Khoá học tiêu biểu
           </Typography.Title>
-          <Swiper
-            scrollbar={{ draggable: true }}
-            modules={[Scrollbar, Navigation, Pagination]}
-            slidesPerView={3}
-            navigation={true}
-            pagination={{
-              clickable: true,
-            }}
-            breakpoints={{
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 1000
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 50,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 50,
-              },
-              1280: {
-                slidesPerView: 4,
-                spaceBetween: 10,
-              },
-            }}
-          >
-            <SwiperSlide>
-              <CourseCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CourseCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CourseCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CourseCard />
-            </SwiperSlide>
-          </Swiper>
+      <SlideShow data={data} RenderSlide={CourseCard}/>
         </Typography.Paragraph>
       </Typography.Paragraph>
     </Typography.Paragraph>

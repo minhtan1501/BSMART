@@ -3,22 +3,25 @@ import { BiSolidUser } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { FaRegCalendarDays } from "react-icons/fa6";
-export default function CourseCard() {
+export default function CourseCard({data}) {
+  console.log(data);
   return (
     <Typography.Paragraph className="card course-card">
       <Link to={"/"}>
         <Typography.Paragraph
           className="banner-course"
-          style={{ paddingTop: "50%", backgroundImage: "url(/PRJ301.webp)" }}
+          style={{ paddingTop: "50%", backgroundImage: `url(${data?.banner})` }}
         >
           <Typography.Paragraph className="avatar-mentor">
             <Avatar
               shape="square"
               size={60}
-              src={<img src={"/mentor-1.webp"} alt="avatar" />}
+              src={<img src={data?.mentor.image} alt="avatar" />}
             />
           </Typography.Paragraph>
         </Typography.Paragraph>
+      </Link >
+
         <Typography.Paragraph
           className="card-body position-relative"
           style={{ flex: "1 1 auto", marginBottom:0 }}
@@ -35,7 +38,7 @@ export default function CourseCard() {
                   marginBottom: 0,
                 }}
               >
-                Java Web Application_Cap toc
+                {data?.title}
               </Typography.Title>
             </Link>
             <Avatar
@@ -46,7 +49,7 @@ export default function CourseCard() {
             />
           </div>
               {/* {Mentor} */}
-          <Link>
+          <Link to={"/"}>
             <Flex
               gap={4}
               style={{ fontWeight: "600 !important" }}
@@ -63,7 +66,7 @@ export default function CourseCard() {
                   fontWeight: 500
                 }}
               >
-                Trần Hoà Hiệp
+                {data?.mentor?.name}
               </p>
             </Flex>
           </Link>
@@ -74,19 +77,13 @@ export default function CourseCard() {
               style={{ fontStyle: "italic", fontSize: 16 }}
               strong={true}
             >
-              14 Học viên
+              {data?.numStudent} Học viên
             </Typography.Text>
           </Flex>
           {/* {Description} */}
           <Typography.Paragraph className="course-card__description">
             <p>
-              .NET Core API là một framework được tạo ra bởi Microsoft để xây
-              dựng các ứng dụng web API và microservices. Nó được thiết kế để hỗ
-              trợ việc phát triển ứng dụng đa nền tảng, cho phép các nhà phát
-              triển xây dựng ứng dụng trên nhiều nền tảng như Windows, macOS và
-              Linux. Ứng dụng được phát triển bằng .NET Core API có thể hoạt
-              động trên các nền tảng khác nhau một cách dễ dàng và không cần
-              phải thực hiện các thủ tục phức tạp để chỉnh sửa mã nguồn.
+            {data?.description}
             </p>
           </Typography.Paragraph>
           {/* {Rating} */}
@@ -96,11 +93,11 @@ export default function CourseCard() {
           {/* {Price} */}
           <Flex align="baseline" gap={6}>
             <span className="course-card__price">
-              {new Intl.NumberFormat('vi-VN', { maximumSignificantDigits: 3 }).format(200000)} VND
+              {new Intl.NumberFormat('vi-VN', { maximumSignificantDigits: 3 }).format(data?.price)} VND
             </span>
             <FaRegCalendarDays size={16}/>
                 <Typography.Text strong style={{fontStyle:"italic"}}>
-                  15 Buổi học
+                  {data?.numOfSessions} Buổi học
                 </Typography.Text>
           </Flex>
           {/* {Control} */}
@@ -108,7 +105,6 @@ export default function CourseCard() {
             XEM CHI TIẾT
           </Link>
         </Typography.Paragraph>
-      </Link>
     </Typography.Paragraph>
   );
 }

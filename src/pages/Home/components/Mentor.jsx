@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import MentorCard from "../../../components/MentorCard";
 
 export default function Mentor() {
+  
   return (
     <Typography.Paragraph className="course-section">
       <Typography.Paragraph className="container">
