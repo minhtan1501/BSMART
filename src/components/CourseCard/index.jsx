@@ -3,8 +3,7 @@ import { BiSolidUser } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { FaRegCalendarDays } from "react-icons/fa6";
-export default function CourseCard({data}) {
-  console.log(data);
+export default function CourseCard({ data }) {
   return (
     <Typography.Paragraph className="card course-card">
       <Link to={"/"}>
@@ -20,35 +19,36 @@ export default function CourseCard({data}) {
             />
           </Typography.Paragraph>
         </Typography.Paragraph>
-      </Link >
+      </Link>
 
-        <Typography.Paragraph
-          className="card-body position-relative"
-          style={{ flex: "1 1 auto", marginBottom:0 }}
-        >
-          {/* {Title Course} */}
-          <div className="course-card__title position-relative ">
-            <Link to={"/"}>
-              <Typography.Title
-                className="card-title"
-                level={5}
-                style={{
-                  marginTop: "5px !important",
-                  lineHeight: "27.5px !important",
-                  marginBottom: 0,
-                }}
-              >
-                {data?.title}
-              </Typography.Title>
-            </Link>
-            <Avatar
-              className="course-card__title__flag"
-              shape="square"
-              size={50}
-              src={<img src={"/ant-icon-01.webp"} alt="avatar" />}
-            />
-          </div>
-              {/* {Mentor} */}
+      <Typography.Paragraph
+        className="card-body position-relative"
+        style={{ flex: "1 1 auto", marginBottom: 0 }}
+      >
+        {/* {Title Course} */}
+        <div className="course-card__title position-relative ">
+          <Link to={"/"}>
+            <Typography.Title
+              className="card-title"
+              level={5}
+              style={{
+                marginTop: "5px !important",
+                lineHeight: "27.5px !important",
+                marginBottom: 0,
+              }}
+            >
+              {data?.title}
+            </Typography.Title>
+          </Link>
+          <Avatar
+            className="course-card__title__flag"
+            shape="square"
+            size={50}
+            src={<img src={"/ant-icon-01.webp"} alt="avatar" />}
+          />
+        </div>
+        <div className="">
+          {/* {Mentor} */}
           <Link to={"/"}>
             <Flex
               gap={4}
@@ -63,28 +63,27 @@ export default function CourseCard({data}) {
                   color: "var(--orange)",
                   fontSize: 16,
                   marginBottom: 0,
-                  fontWeight: 500
+                  fontWeight: 500,
                 }}
               >
                 {data?.mentor?.name}
               </p>
             </Flex>
           </Link>
-            {/* {Student} */}
+          {/* {Student} */}
           <Flex className="course-card__student" align="center" gap={2}>
             <BiSolidUser size={24} />
             <Typography.Text
               style={{ fontStyle: "italic", fontSize: 16 }}
               strong={true}
             >
+
               {data?.numStudent} Học viên
             </Typography.Text>
           </Flex>
           {/* {Description} */}
           <Typography.Paragraph className="course-card__description">
-            <p>
-            {data?.description}
-            </p>
+            <p>{data?.description}</p>
           </Typography.Paragraph>
           {/* {Rating} */}
           <Typography.Paragraph style={{ marginBlock: 0 }}>
@@ -93,18 +92,22 @@ export default function CourseCard({data}) {
           {/* {Price} */}
           <Flex align="baseline" gap={6}>
             <span className="course-card__price">
-              {new Intl.NumberFormat('vi-VN', { maximumSignificantDigits: 3 }).format(data?.price)} VND
+              {new Intl.NumberFormat("vi-VN", {
+                maximumSignificantDigits: 3,
+              }).format(data?.price)}{" "}
+              VND
             </span>
-            <FaRegCalendarDays size={16}/>
-                <Typography.Text strong style={{fontStyle:"italic"}}>
-                  {data?.numOfSessions} Buổi học
-                </Typography.Text>
+            <FaRegCalendarDays size={16} />
+            <Typography.Text strong style={{ fontStyle: "italic" }}>
+              {data?.numOfSessions} Buổi học
+            </Typography.Text>
           </Flex>
           {/* {Control} */}
           <Link to={"/"} className="course-card__btn">
             XEM CHI TIẾT
           </Link>
-        </Typography.Paragraph>
+        </div>
+      </Typography.Paragraph>
     </Typography.Paragraph>
   );
 }

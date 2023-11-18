@@ -39,7 +39,7 @@
   width: 100%;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
-  line-height: 25px !important;
+  line-height: 32px !important;
   -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -102,8 +102,4 @@
   opacity: 0.8;
   background-color: var(--orange) !important;
   color: white !important;
-}
-
-.swiper-pagination {
-  margin-top: 2rem;
 }
