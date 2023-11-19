@@ -46,3 +46,11 @@
     display: none;
   }
 }
+
+
+@media only screen and (max-width: 767px) {
+
+  .header-bottom {
+      display: none !important;
+  }
+}
