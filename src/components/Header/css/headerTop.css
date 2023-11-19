@@ -60,3 +60,15 @@
   background: transparent !important;
   transition: color 0.2s ease;
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .header-search-course {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .header-top {
+    display: none;
+  }
+}

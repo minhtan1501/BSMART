@@ -1,0 +1,94 @@
+.footer {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    margin-top: 0px;
+    background-color: #0e0a38;
+    padding: 90px 0 30px;
+    color: #fff;
+}
+
+.footer-logo {
+    padding-right: 40px;
+} 
+
+
+.site-logo-footer {
+    color: #fff;
+    margin-left: 45px;
+}
+.site-logo {
+    color: #0e0a38;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.site-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-about-description {
+    color: #fff;
+    font-weight: 400;
+    margin-top: 10px;
+    line-height: 1.42857143;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.footer h6 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.footer-menu h4 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+    color: #ff630e;
+}
+
+.footer-menu a {
+    color: white !important;
+    display: block;
+    font-weight: 500 !important;
+    padding-bottom: 15px;
+}
+
+.footer-contact h4 {
+font-size: 20px;
+line-height: 30px;
+margin-bottom: 20px;
+color: #fff;
+font-weight: 700;
+color: #ff630e;
+}
+
+.footer-contact div {
+    color: #fff;
+    position: relative;
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 25px;
+    display: flex;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+}
+
+.footer-contact svg {
+    color: var(--orange) !important;
+}
+
+.footer hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+}

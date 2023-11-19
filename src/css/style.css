@@ -126,6 +126,7 @@ table {
     letter-spacing: 1px;
     border-radius: 5px;
 	text-decoration: none !important;
+	text-transform: capitalize;
 }
 
 .sub-title, .card-text {
@@ -136,5 +137,6 @@ table {
 .btn-link:hover {
 	background: white  !important;
 	color : var(--orange)  !important;
+	border: 1px solid var(--orange) !important;
 	transition: all 0.5 ease-in-out;
 }

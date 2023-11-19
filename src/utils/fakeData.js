@@ -43,7 +43,7 @@ export const AdvantagesData = [
   },
 ];
 
-export const categories = [
+export const Categories = [
   {
     id: 1,
     name: "Front-end",
@@ -152,7 +152,7 @@ export const CourseList = [
       name: "Back-end",
     },
     learnMethod: "Offline",
-    price:2000000
+    price: 2000000,
   },
   {
     id: 5,
@@ -210,7 +210,7 @@ export const CourseList = [
     numOfSessions: 2,
     description: "Giúp các bạn vượt qua kì thi môn Database một cách dễ dàng!",
     numStudent: 15,
-    banner: "/PRJ306.png",
+    banner: "/PRJ306.webp",
     categories: {
       id: 4,
       name: "Cấp tốc",
@@ -313,11 +313,49 @@ export const CourseList = [
     numOfSessions: 2,
     description: "Giúp các bạn vượt qua kì thi môn Database một cách dễ dàng!",
     numStudent: 15,
-    banner: "/PRJ306.png",
+    banner: "/PRJ306.webp",
     categories: {
       id: 4,
       name: "Cấp tốc",
     },
     learnMethod: "Online",
+  },
+];
+
+export const MentorList = [
+  {
+    id: 1,
+    image: "/mentor-1.webp",
+    name: "Phan Nhật Tân",
+    description:
+      "Nhật Tân, với kinh nghiệm giảng dạy và chia sẻ cho nhiều học viên, tôi đã xây dựng được niềm tin rất lớn đối với cộng đồng. Hy vọng tôi sẽ đem đến cho các bạn những trải nghiệm đáng quý trong quá trình học tập cùng tôi.",
+  },
+  {
+    id: 2,
+    image: "/mentor-3.webp",
+    name: "Tô Lý Hữu Nhân",
+    description:
+      "Tôi là Hữu Nhân, hiện tại là một Business Analyst với hơn 3 năm kinh nghiệm và 2 năm với vị trí Tester/QC. Tôi đã tham gia các dự án product tới outsource. Và từ những kinh nghiệm trầy da tróc vảy khi tham gia các dự án, tôi tin rằng tôi có thể chia sẻ các kinh nghiệm về quản lý dự án, quy trình làm phầm mềm, kiểm thử phần mềm và những kinh nghiệm xử lý vấn đề.",
+  },
+  {
+    id: 3,
+    image: "/mentor-2.webp",
+    name: "Trần Hoà Hiệp",
+    description:
+      "Tôi là Trần Hòa Hiệp, một full stack developer với 5 năm kinh nghiệm về công nghệ .NET có kiến ​​thức tốt về Thiết kế cơ sở dữ liệu, Design Pattern, Phân tích và thiết kế hướng đối tượng. 2 năm trong việc đào tạo học viên là người đi làm, và sinh viên sắp ra trường.",
+  },
+  {
+    id: 4,
+    image: "/mentor-5.webp",
+    name: "Đỗ Minh Quân",
+    description:
+      "Tôi tên là Đỗ Minh Quân, tốt nghiệp ngành công nghệ thông tin, chuyên ngành công nghệ phần mềm. Tôi là một lập trình viên Front-end có hơn 3 năm kinh nghiệm trong việc phát triển giao diện cho các trang web và ứng dụng di động. Tôi đã từng tham gia các dự án với công nghệ HTML, CSS, JavaScript, React ... và từ đó tích lũy được nhiều kiến thức, kinh nghiệm trong lĩnh vực này. Tôi muốn chia sẻ kiến thức của mình cho những người mới bắt đầu, giúp họ có thể nhanh chóng tiếp cận và đạt được thành công trong lĩnh vực lập trình Front-end.",
+  },
+  {
+    id: 5,
+    image: "/mentor-4.webp",
+    name: "Nguyễn Viết Châu",
+    description:
+      "Xin chào! Tôi là Nguyễn Viết Châu – mentor có kinh nghiệm trong việc giảng dạy các môn học liên quan đến công nghệ thông tin. Với 3 năm kinh nghiệm làm mentor và một nền tảng kiến thức chuyên môn vững vàng, tôi tự tin rằng mình có thể giúp các bạn sinh viên nắm vững kiến thức, nâng cao kỹ năng và đạt được thành tích tốt nhất trong học tập. Tôi luôn đặt sự tiếp thu và hiểu biết của sinh viên lên hàng đầu và dùng các phương pháp giảng dạy đa dạng, trực quan để giúp các bạn hiểu bài một cách dễ dàng và thú vị.",
   },
 ];

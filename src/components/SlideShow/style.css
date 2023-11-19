@@ -3,6 +3,8 @@
   margin-top: 20px;
 }
 
+
+
 .swiper-button-next,
 .swiper-button-prev {
   color: hsl(210, 2%, 57%) !important;
@@ -45,4 +47,5 @@
 
 .swiper-slide {
   flex-grow: 1;
+  height: unset !important;
 }

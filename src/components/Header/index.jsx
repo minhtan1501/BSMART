@@ -4,7 +4,7 @@ import HeaderBottom from './components/HeaderBottom'
 export default function Header() {
   return (
     <>
-        {/* <HeaderTop/> */}
+        <HeaderTop/>
         <HeaderBottom/>
     </>
 

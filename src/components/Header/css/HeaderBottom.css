@@ -39,3 +39,10 @@
     padding: 0px !important;
   }
 }
+
+
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  .header-bottom {
+    display: none;
+  }
+}

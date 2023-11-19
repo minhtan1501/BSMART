@@ -9,17 +9,16 @@ import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./style.css";
 
-export default function SlideShow({ data = [], RenderSlide = null }) {
+export default function SlideShow({ data = [], RenderSlide = null, classPagination= "abc" + Math.floor(Math.random(1) * 99999) }) {
   const swiperRef = useRef();
-  const paginationRef = useRef(null);
-  console.log(1);
   return (
     <div className="swiper-container">
       <Swiper
+      className="logo-slide"
         scrollbar={{ draggable: true }}
         modules={[Scrollbar, Navigation, Pagination]}
         pagination={{
-          el: ".my-custom-pagination-div",
+          el: `.${classPagination}`,
           clickable: true,
         }}
         onSwiper={(swiper) => {
@@ -52,7 +51,7 @@ export default function SlideShow({ data = [], RenderSlide = null }) {
           );
         })}
       </Swiper>
-      <div ref={paginationRef} className="my-custom-pagination-div"></div>
+      <div style={{marginTop: 30, textAlign:"center"}}  className={classPagination}></div>
       <div
         className="swiper-button-next"
         onClick={() => swiperRef.current.slideNext()}

@@ -3,13 +3,22 @@ import { BiSolidUser } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { FaRegCalendarDays } from "react-icons/fa6";
+
+const LEVELSIMAGE = {
+  1: "/ant-icon-01.webp",
+  2: "/ant-icon-02.webp",
+  3: "/ant-icon-03.webp",
+  4: "/ant-icon-04.webp"
+
+}
+
 export default function CourseCard({ data }) {
   return (
     <Typography.Paragraph className="card course-card">
       <Link to={"/"}>
         <Typography.Paragraph
           className="banner-course"
-          style={{ paddingTop: "50%", backgroundImage: `url(${data?.banner})` }}
+          style={{ paddingTop: "50%", backgroundImage: `url(${data?.banner})`,marginBottom:0 }}
         >
           <Typography.Paragraph className="avatar-mentor">
             <Avatar
@@ -26,10 +35,10 @@ export default function CourseCard({ data }) {
         style={{ flex: "1 1 auto", marginBottom: 0 }}
       >
         {/* {Title Course} */}
-        <div className="course-card__title position-relative ">
+        <div className="course-card__info position-relative ">
           <Link to={"/"}>
             <Typography.Title
-              className="card-title"
+              className="course-card__info__title"
               level={5}
               style={{
                 marginTop: "5px !important",
@@ -41,10 +50,10 @@ export default function CourseCard({ data }) {
             </Typography.Title>
           </Link>
           <Avatar
-            className="course-card__title__flag"
+            className="course-card__info__flag"
             shape="square"
             size={50}
-            src={<img src={"/ant-icon-01.webp"} alt="avatar" />}
+            src={<img src={data.categories.id === 4 ?  "/hot.webp" : LEVELSIMAGE[data.level]} alt="avatar" />}
           />
         </div>
         <div className="">
