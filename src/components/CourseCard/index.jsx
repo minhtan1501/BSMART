@@ -8,17 +8,20 @@ const LEVELSIMAGE = {
   1: "/ant-icon-01.webp",
   2: "/ant-icon-02.webp",
   3: "/ant-icon-03.webp",
-  4: "/ant-icon-04.webp"
-
-}
+  4: "/ant-icon-04.webp",
+};
 
 export default function CourseCard({ data }) {
   return (
-    <Typography.Paragraph className="card course-card">
+    <div className="card course-card">
       <Link to={"/"}>
         <Typography.Paragraph
           className="banner-course"
-          style={{ paddingTop: "50%", backgroundImage: `url(${data?.banner})`,marginBottom:0 }}
+          style={{
+            paddingTop: "50%",
+            backgroundImage: `url(${data?.banner})`,
+            marginBottom: 0,
+          }}
         >
           <Typography.Paragraph className="avatar-mentor">
             <Avatar
@@ -30,9 +33,9 @@ export default function CourseCard({ data }) {
         </Typography.Paragraph>
       </Link>
 
-      <Typography.Paragraph
+      <div
         className="card-body position-relative"
-        style={{ flex: "1 1 auto", marginBottom: 0 }}
+        style={{ flex: "1 1 auto", marginBottom: "unset !important" }}
       >
         {/* {Title Course} */}
         <div className="course-card__info position-relative ">
@@ -43,7 +46,7 @@ export default function CourseCard({ data }) {
               style={{
                 marginTop: "5px !important",
                 lineHeight: "27.5px !important",
-                marginBottom: 0,
+                marginBottom: "0 !important",
               }}
             >
               {data?.title}
@@ -53,10 +56,19 @@ export default function CourseCard({ data }) {
             className="course-card__info__flag"
             shape="square"
             size={50}
-            src={<img src={data.categories.id === 4 ?  "/hot.webp" : LEVELSIMAGE[data.level]} alt="avatar" />}
+            src={
+              <img
+                src={
+                  data.categories.id === 4
+                    ? "/hot.webp"
+                    : LEVELSIMAGE[data.level]
+                }
+                alt="avatar"
+              />
+            }
           />
         </div>
-        <div className="">
+        <div className="mt-auto">
           {/* {Mentor} */}
           <Link to={"/"}>
             <Flex
@@ -98,7 +110,7 @@ export default function CourseCard({ data }) {
             <Rate disabled defaultValue={4} className="course-card__rating" />
           </Typography.Paragraph>
           {/* {Price} */}
-          <Flex align="baseline" gap={6}>
+          <Flex align="baseline" gap={4}>
             <span className="course-card__price">
               {new Intl.NumberFormat("vi-VN", {
                 maximumSignificantDigits: 3,
@@ -115,7 +127,7 @@ export default function CourseCard({ data }) {
             XEM CHI TIẾT
           </Link>
         </div>
-      </Typography.Paragraph>
-    </Typography.Paragraph>
+      </div>
+    </div>
   );
 }

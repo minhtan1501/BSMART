@@ -52,6 +52,7 @@
   color: white;
   padding: 0 4px;
   background-color: transparent;
+  box-shadow: unset;
 }
 
 .header-top-social svg:hover,

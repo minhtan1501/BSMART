@@ -21,7 +21,7 @@
 .advantages-2-content h4 {
   font-size: 24px;
   line-height: 30px;
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   margin-bottom: 20px;
 }
@@ -29,7 +29,7 @@
 .advantages-2-content h2 {
   font-size: 30px;
   line-height: 30px;
-  font-weight: 600;
+  font-weight: bold;
   font-style: normal;
   margin-bottom: 30px;
   margin-top: 0px !important;
@@ -38,4 +38,22 @@
 .advantages-2-content a {
     padding: 15px 7px !important;
     height: 100%;
+}
+
+@media only screen and (max-width: 767px){
+  .advantages-2 {
+      padding: 20px 0 20px;
+  }
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+  .advantages-2 .advantages-2-content h4 {
+      font-size: 15px !important;
+      margin-bottom: 0 !important;
+  }
+  .advantages-2 .advantages-2-content h2 {
+    font-size: 21px !important;
+    margin-bottom: 0 !important;
+}
 }

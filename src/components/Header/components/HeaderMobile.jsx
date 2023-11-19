@@ -1,25 +1,56 @@
-import { Badge, Drawer, Flex, Collapse } from "antd";
-import "../css/HeaderMobile.css";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { Badge, Button, Collapse, Drawer, Flex, Input } from "antd";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { FaFacebookF, FaLinkedinIn, FaPhone, FaPlus } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
-const text = (
-  <p
-    style={{
-      paddingLeft: 24,
-    }}
-  >
-    A dog is a type of domesticated animal. Known for its loyalty and
-    faithfulness, it can be found as a welcome guest in many households across
-    the world.
-  </p>
+import { MdOutlineRemove } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { Categories } from "../../../utils/fakeData";
+import "../css/HeaderMobile.css";
+import { IoMdSearch } from "react-icons/io";
+import { BiLogoGmail } from "react-icons/bi";
+import { ImYoutube2 } from "react-icons/im";
+import { FaPhoneAlt } from "react-icons/fa";
+
+const CourseList = (
+  <Flex vertical className="sub-menu sidebar-collapse ">
+    {Categories.map((c, i) => {
+      return (
+        <Link to={"/"} key={c.id}>
+          {c.name}
+        </Link>
+      );
+    })}
+  </Flex>
 );
-const items = [
+
+const AboutList = (
+  <Flex vertical className="sub-menu sidebar-collapse ">
+    <Link to={"/"}>CÂU CHUYỆN FOUNDER</Link>
+    <Link to={"/"}>NỀN TẢNG LMS</Link>
+  </Flex>
+);
+const Course = [
   {
     key: "1",
-    label: "This is panel header 1",
-    children: text,
+    label: (
+      <Link onClick={(e) => e.stopPropagation()} to="">
+        Khoá học
+      </Link>
+    ),
+    children: CourseList,
+  },
+];
+
+const About = [
+  {
+    key: "1",
+    label: (
+      <Link onClick={(e) => e.stopPropagation()} to="">
+        About
+      </Link>
+    ),
+    children: AboutList,
   },
 ];
 export default function HeaderMobile() {
@@ -39,10 +70,10 @@ export default function HeaderMobile() {
           <div className="header-mobile__logo">
             <img className="icon-logo-mobile" src="/icon-logo.webp" alt="" />
           </div>
-          <GiHamburgerMenu onClick={showDrawer} size={24} />
+          <GiHamburgerMenu className="sidebar-icon--open" onClick={showDrawer} size={24} />
         </div>
       </div>
-      <Drawer placement="right" onClose={onClose} open={open}>
+      <Drawer  placement="right" onClose={onClose} open={open}>
         <div className="sidebar-top">
           <Link to={"/"}>
             <img
@@ -54,7 +85,7 @@ export default function HeaderMobile() {
           <IoCloseSharp
             size={20}
             onClick={onClose}
-            style={{ strokeWidth: 50 }}
+            style={{ strokeWidth: 50, cursor:"pointer" }}
           />
         </div>
         <Link>
@@ -67,21 +98,40 @@ export default function HeaderMobile() {
             <Link className="sidebar-center__text" to={"/"}>
               Trang Chủ
             </Link>
-            <Link className="sidebar-center__text" to={"/"}>
-              Về Chúng Tôi
-            </Link>
+            <div
+              className="sidebar-center__text sidebar-collapse"
+              to={"/course"}
+            >
+              <Collapse
+                items={About}
+                bordered={false}
+                expandIconPosition="end"
+                expandIcon={(panelProps) => {
+                  if (panelProps.isActive) {
+                    return <MdOutlineRemove />;
+                  }
+                  return <FaPlus />;
+                }}
+              />
+            </div>
             <Link className="sidebar-center__text" to={"/"}>
               Khóa Học STEM
             </Link>
-            <div className="sidebar-center__text" to={"/course"}>
-              Khoá Học
-              <div className="" onClick={(e) => e.stopPropagation()}>
-                <Collapse
-                  items={items}
-                  bordered={false}
-                  defaultActiveKey={["1"]}
-                />
-              </div>
+            <div
+              className="sidebar-center__text sidebar-collapse"
+              to={"/course"}
+            >
+              <Collapse
+                items={Course}
+                bordered={false}
+                expandIconPosition="end"
+                expandIcon={(panelProps) => {
+                  if (panelProps.isActive) {
+                    return <MdOutlineRemove />;
+                  }
+                  return <FaPlus />;
+                }}
+              />
             </div>
             <Link className="sidebar-center__text" to={"/"}>
               Mentor
@@ -90,6 +140,41 @@ export default function HeaderMobile() {
               Blog
             </Link>
           </Flex>
+        </div>
+        <div className="sidebar-bottom">
+          <form className="sidebar-bottom__search" >
+              <Input
+                className=""
+                placeholder="Tìm kiếm khoá học"
+                suffix={<IoMdSearch size={20}  style={{strokeWidth: 25}}/>}
+              />
+            </form>
+
+              <div className="sidebar-bottom__contract-info">
+              <Flex gap={6} style={{ paddingBottom: 0,marginBottom: "16px" }} align="center">
+                <BiLogoGmail size={26} />
+                <p className="m-0">admin@bsmart.edu.vn</p>
+              </Flex>
+              <Flex gap={6} style={{ paddingBottom: 0 }}>
+                <FaPhoneAlt size={26} />
+                <p className="m-0">028 9999 79 39</p>
+              </Flex>
+                </div>    
+
+                <Flex className="social-list" gap="middle" horizon="true" align="center" style={{marginTop: "10px"}}>
+                <FaFacebookF size={14} />
+                <FaLinkedinIn size={14} />
+                <ImYoutube2 size={20} />
+              </Flex>
+              <Flex className="sidebar-bottom__reg-login"  align="center">
+              <Button className="" type="primary">
+                Đăng nhập
+              </Button>
+              <span>|</span>
+              <Button className="" type="primary">
+                Đăng ký
+              </Button>
+            </Flex>
         </div>
       </Drawer>
     </div>

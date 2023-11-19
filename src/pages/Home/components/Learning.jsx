@@ -5,13 +5,13 @@ export default function Learning() {
     <section className="learning-path">
       <Typography.Paragraph className="container-fluid">
         <Row>
-          <Col sm={12} className="left-section text-center">
+          <Col sm={24} lg={12}  className="left-section text-center">
             <Typography.Paragraph className="position-relative left-section__content">
               <Typography.Title level={2}>Trái ngành</Typography.Title>
               <Typography.Text>From Zero to Hero</Typography.Text>
             </Typography.Paragraph>
           </Col>
-          <Col sm={12} className="right-section text-center">
+          <Col sm={24}   lg={12} className="right-section text-center">
             <Typography.Paragraph className="position-relative right-section__content">
               <Typography.Title level={2}>Đã biết lập trình</Typography.Title>
               <Typography.Text>

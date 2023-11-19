@@ -34,9 +34,6 @@
   border-radius: 5px;
 }
 
-.course-card__info {
-  margin-bottom: auto;
-}
 
 .course-card__info__title {
   font-size: 24px !important;

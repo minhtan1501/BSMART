@@ -29,6 +29,9 @@
   z-index: 10 !important;
 }
 
+.ant-drawer-content-wrapper {
+    width: unset !important;
+}
 
 .header-mobile__content {
     display: flex;
@@ -53,9 +56,9 @@
     margin-left: -22px;
 }
 
-.sidebar-center__text {
+.sidebar-center__text, .sidebar-collapse a {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700 !important;
     color: #0e0a38;
     text-decoration: none;
     text-transform: uppercase;
@@ -65,10 +68,74 @@
     cursor: pointer;
 }
 
-.sidebar-center__text:hover {
+.sidebar-center__text:hover, .sidebar-collapse a:hover {
     color: #0e0a38 !important;
 
 }
 .sidebar-center__text:last-child {
     border-bottom: unset;
+}
+
+.sidebar-collapse .ant-collapse  {
+    width: 100%;
+    background-color: transparent;
+}
+
+.sidebar-collapse .ant-collapse-header {
+    padding: 0 !important;
+}
+
+.sidebar-collapse .ant-collapse-content-active {
+    margin-top: 10px;
+}
+
+.sub-menu a:last-child {
+    border: unset !important;
+}
+
+.ant-collapse-content-box {
+    padding: 8px 16px !important;
+}
+
+.sidebar-bottom__search {
+    margin: 20px 0 25px;
+}
+
+.sidebar-bottom__search input {
+    padding: 10px 30px 10px 10px !important;
+
+}
+
+
+
+.sidebar-bottom__search .ant-input-affix-wrapper-focused {
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25) !important;
+}
+
+.sidebar-bottom__contract-info p {
+    font-size: 16px;
+}
+
+.sidebar-bottom__contract-info svg {
+    color: var(--orange);
+}
+
+.sidebar-bottom__reg-login button {
+    background-color: transparent !important;
+    color: black;
+    font-size: 16px;
+    box-shadow: unset !important;
+}
+.sidebar-bottom__reg-login button:hover {
+    color: black !important;
+    opacity: 0.8;
+}
+
+.sidebar-icon--open:hover {
+    color: var(--orange) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-icon--open {
+    cursor: pointer;
 }
