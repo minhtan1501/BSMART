@@ -12,34 +12,41 @@
 }
 
 .icon-logo {
-    width: 190px;
-    height: 75px;
-    object-fit: cover;
+  width: 190px;
+  height: 75px;
+  object-fit: cover;
 }
 
-.icon-shopping-cart{
-    width: 62px;
-    height: 62px;
-    object-fit: cover;
+.icon-shopping-cart {
+  width: 62px;
+  height: 62px;
+  object-fit: cover;
 }
 
 .nav-link {
+  padding: 0 !important;
+}
+
+.nav-link,
+.header-bottom .ant-menu-title-content a {
   font-size: 17px;
   color: var(--text-primary);
   font-weight: 500;
+  text-decoration: none;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.header-bottom .ant-menu-title-content:hover a {
   color: var(--orange);
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
   .header-bottom .container {
     padding: 0px !important;
   }
 }
-
 
 @media only screen and (min-width: 767px) and (max-width: 992px) {
   .header-bottom {
@@ -47,10 +54,73 @@
   }
 }
 
-
 @media only screen and (max-width: 767px) {
-
   .header-bottom {
-      display: none !important;
+    display: none !important;
   }
+}
+
+.header-bottom .ant-menu-horizontal {
+  line-height: 16px;
+  border-bottom: none;
+}
+
+.ant-menu-submenu {
+  padding: 0 !important;
+}
+
+.ant-menu-submenu::after {
+  content: unset !important;
+}
+
+.ant-menu-item-group-title {
+  padding: unset;
+}
+
+.ant-menu .ant-menu-item-group-title {
+  padding: unset;
+}
+
+.ant-menu-item-group-list {
+  min-width: 180px;
+  margin-top: 10px;
+}
+
+.ant-menu-item-group-list .ant-menu-item {
+  padding-inline: 8px !important;
+  border-bottom: 1px solid #f5f5f5;
+  border-radius: 0px !important;
+}
+
+.ant-menu-title-content {
+  text-decoration: unset !important;
+}
+
+.ant-menu .ant-menu-item-selected {
+  color: var(--text-primary) !important;
+}
+
+.ant-menu.ant-menu-sub {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border-top: 2px solid #ff630e;
+}
+
+.ant-menu-title-content a {
+  font-weight: 600;
+}
+
+.ant-menu-title-content a:hover {
+  text-decoration: none !important;
+  color: var(--orange) !important;
+}
+
+
+.ant-menu .ant-menu-sub {
+  margin-top: 5px;
+}
+
+.ant-menu-item:hover {
+  background-color: transparent !important;
+
 }

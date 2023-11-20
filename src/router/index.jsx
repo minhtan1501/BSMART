@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home";
+import CoursePage from "../pages/CoursePage";
 
 export default createBrowserRouter([
   {
@@ -9,6 +10,10 @@ export default createBrowserRouter([
       {
         element: <Home />,
         path: "/",
+      },
+      {
+        element: <CoursePage />,
+        path: "/course",
       },
     ],
     path: "/",
